@@ -551,7 +551,6 @@ html.hmc-abierto{overflow:hidden}
 .aporta-grid{display:grid;gap:2rem;align-items:start}
 .aporta-izq h2{margin:0}
 .aporta-izq .eti{margin-bottom:.75rem}
-.aporta-desc{display:none;margin:1rem 0 0;color:var(--mut)}
 .aporta{background:none;border:0;padding:0;box-shadow:none;display:flex;flex-direction:column;gap:.75rem}
 .aporta.lista-ico li{display:flex;align-items:center;gap:1rem;padding:1.25rem;border:1px solid var(--borde);border-radius:1rem;background:var(--card);box-shadow:0 1px 3px rgba(32,41,60,.06),0 1px 2px rgba(32,41,60,.04);color:var(--fg);font-weight:500;line-height:1.5}
 .aporta.lista-ico li:last-child{border-bottom:1px solid var(--borde)}
@@ -563,4 +562,4 @@ html.hmc-abierto{overflow:hidden}
 .aporta li:nth-child(4) .li-ico{background:linear-gradient(135deg,#3b4f8f,#5a6fb0)}
 .aporta li:nth-child(5) .li-ico{background:linear-gradient(135deg,#20293c,#3a4a66)}
 @media (min-width:768px){#que-aporta{padding:4rem 0}}
-@media (min-width:1024px){.aporta-grid{grid-template-columns:2fr 3fr;gap:3rem;align-items:start}.aporta-izq{position:sticky;top:6rem}.aporta-desc{display:block}}
+@media (min-width:1024px){.aporta-grid{grid-template-columns:2fr 3fr;gap:3rem;align-items:start}.aporta-izq{position:sticky;top:6rem}}
