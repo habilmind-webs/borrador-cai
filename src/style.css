@@ -520,3 +520,25 @@ html.hmc-abierto{overflow:hidden}
 /* 03/11 · Rosario vía DC: foto de #necesidad con más radio y más ancha en escritorio (columnas 1fr/1fr) */
 .img-nec{border-radius:1.25rem}
 @media (min-width:1024px){.nec-grid{grid-template-columns:1fr 1fr;gap:3rem}}
+/* 03/11 · Rosario vía DC: cierre con el aspecto del CTA final de socioemociograma.com en vivo (tarjeta blanca centrada, etiqueta, 3 beneficios y botón negro Precios con pulso) */
+.cierre{background:transparent;color:var(--fg);border-top:0;padding:4.375rem 0;text-align:center}
+.cierre-tarjeta{max-width:56rem;margin:0 auto;background:var(--card);padding:2rem}
+.cierre-eti{display:inline-flex;align-items:center;gap:.75rem;max-width:100%;margin:0 0 1.5rem;padding:.75rem 1rem;border:1px solid var(--rule);color:var(--fg);font-size:.875rem;font-weight:500;line-height:1.25}
+.cierre-eti svg{flex:0 0 auto}
+.cierre h2{color:#000;margin:0 0 1.5rem}
+.cierre .cierre-resalte{color:inherit}
+.cierre .cierre-lead{color:var(--mut);font-size:1rem;line-height:1.6;max-width:42rem;margin:0 auto 2rem}
+.cierre-ben{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin:0 0 2.5rem;padding:0;list-style:none}
+.cierre-ben li{display:flex;align-items:center;gap:.5rem;color:var(--mut);font-size:.875rem;font-weight:500}
+.cierre-ben svg{color:var(--pri);flex:0 0 auto;stroke-width:1.5}
+.cierre-cta{display:flex;justify-content:center}
+.btn-cierre{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;height:3.0625rem;padding:0 2.5rem;background:#000;color:#fff;border:0;border-radius:0;font-size:1rem;font-weight:500;line-height:1.5;text-decoration:none;transition:background-color .2s;animation:cierre-pulso 2s ease-in-out infinite}
+.btn-cierre:hover{background:rgba(0,0,0,.9)}
+.btn-cierre:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.cierre-flecha{display:inline-flex;transition:transform .2s}
+.btn-cierre:hover .cierre-flecha{transform:translateX(4px)}
+@keyframes cierre-pulso{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
+@media (prefers-reduced-motion:reduce){.btn-cierre{animation:none}.cierre-flecha{transition:none}}
+@media (min-width:768px){.cierre-tarjeta{padding:3rem}.cierre-eti{font-size:1rem}.cierre-ben{gap:1.5rem}.btn-cierre{height:3.5625rem;padding:0 3.5rem;font-size:1.125rem}}
+@media (min-width:1024px){.cierre-tarjeta{padding:4rem}.cierre .cierre-lead{font-size:1.125rem}.cierre-ben li{font-size:1rem}}
+@media (max-width:480px){.cierre-cta .btn-cierre{width:100%;padding:0 1.5rem}}
