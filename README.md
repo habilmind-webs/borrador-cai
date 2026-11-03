@@ -11,7 +11,7 @@ Borrador pedido por Rosario (vía Doña Clotilde) el 03/11/2026. **Solo staging*
 - CTA de Ofelia `cai` (slug provisional; hoy da 404 hasta que Ofelia lo dé de alta).
 - Fotos (hero 4:3), logo ICCE y logo oficial del CAI (ahora icono SVG de las pruebas BAP + sigla).
 - GA4 (`GA4_ID` placeholder en `src/main.js`; en *.sslip.io no se carga nunca).
-- URL de «Solicitar información» y de «Documentación de la herramienta» (docs.habilmind.com); contenido de las subpáginas.
+- Contenido de las subpáginas. (Sin botón «Solicitar información»: los únicos CTA son Precios y Reunión o llamada; en la banda de cierre solo Precios.)
 
 ```
 npm ci && npm run dev     # local
