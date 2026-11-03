@@ -2,11 +2,11 @@
    Paleta (HSL de socioemociograma -> hex):
    fondo crema 60 29% 97% #fafaf5 · texto 214 26% 11% #151b23 · superficie 53 29% 95% #f6f5ef
    azul marino (primary) 220 30% 18% #20293c · secundario 56 31% 90% #edecde · muted 53 24% 93% #f1f0e9
-   texto suave 215 7% 46% #6d747e · terracota (accent) 18 47% 47% #b06140 · borde 55 16% 85% #dfded3
+   texto suave 215 7% 46% #6d747e · azul marino (accent) 213 52% 24% #1e3a5f · borde 55 16% 85% #dfded3
    línea (rule) 56 13% 78% #cecdc0 · habilmind 195 59% 44% #2e91b2 · tarjeta #ffffff · pie #171717 */
 :root{
   --bg:#fafaf5;--fg:#151b23;--surf:#f6f5ef;--pri:#20293c;--sec:#edecde;--muted:#f1f0e9;--mut:#6d747e;
-  --acc:#b06140;--hm:#2e91b2;--borde:#dfded3;--rule:#cecdc0;--card:#ffffff;--accion:#000000;
+  --acc:#1e3a5f;--hm:#2e91b2;--borde:#dfded3;--rule:#cecdc0;--card:#ffffff;--accion:#000000;
   --sombra:0 1px 2px rgba(32,41,60,.04);
 }
 *{box-sizing:border-box;border-color:var(--borde)}
@@ -67,7 +67,7 @@ strong,b,dt,summary{font-weight:700}
 .tira{border-block:1px solid var(--borde);background:var(--pri);color:var(--bg);overflow:hidden;padding:1rem 0}
 .tira-mov{display:flex;width:max-content;animation:tira 38s linear infinite}.tira:hover .tira-mov{animation-play-state:paused}
 .tira ul{display:flex;list-style:none;margin:0;padding:0}.tira li{white-space:nowrap;padding:0 1.75rem;position:relative;font-size:.98rem}
-.tira li::after{content:"·";position:absolute;right:-.2rem;color:#e7a585}
+.tira li::after{content:"·";position:absolute;right:-.2rem;color:#8fa8c6}
 @keyframes tira{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.tira-mov,.flecha{animation:none}.tira-mov{flex-wrap:wrap;width:auto}.tira ul[aria-hidden]{display:none}}
 /* Secciones (relleno 4.375rem como socioemociograma; alternas en superficie) */
@@ -97,7 +97,7 @@ dl{margin:0 0 1rem;display:grid;gap:.5rem}dl div{display:grid;grid-template-colu
 @media (min-width:700px){.benefs{grid-template-columns:repeat(2,1fr)}.benef:last-child{grid-column:1/-1}}
 @media (min-width:1024px){.benefs{grid-template-columns:repeat(6,1fr);gap:1.75rem}.benef{grid-column:span 2}.benef:nth-child(n+4){grid-column:span 3}.benef:last-child{grid-column:span 3}}.pendiente{color:var(--mut);font-style:normal}
 .cierre{text-align:center}.centro{margin-top:1.5rem}.cierre .btn{height:3rem;padding:0 2rem;font-size:1rem}
-/* Cierre CTA como banda independiente: navy del sistema con filete terracota, distinta de Beneficios (crema) y FAQ (crema alt) */
+/* Cierre CTA como banda independiente: navy del sistema con filete marino, distinta de Beneficios (crema) y FAQ (crema alt) */
 .cierre{background:var(--pri);color:#fff;border-top:4px solid var(--acc);padding:5rem 0}
 .cierre h2{color:#fff}.cierre .lead{color:rgba(255,255,255,.78)}
 .cierre .btn-pri{background:#fff;color:#000;border-color:#fff}.cierre .btn-pri:hover{background:var(--sec);border-color:var(--sec)}
@@ -107,7 +107,7 @@ dl{margin:0 0 1rem;display:grid;gap:.5rem}dl div{display:grid;grid-template-colu
 details{background:var(--card);border:1px solid var(--borde);padding:1.1rem 1.4rem}summary{cursor:pointer;font-weight:500}details p{margin:.75rem 0 0;color:var(--mut)}
 /* Pie oscuro como socioemociograma */
 /* Pie (pedido de Rosario 30/10/2026): gris oscuro, ecosistema en 3 columnas, teléfonos por país, contacto y legal */
-.pie{background:#1f2328;color:#c9ccd1;font-size:.875rem;line-height:1.5;padding:3.5rem 0 2rem;border-top:3px solid #b06140}
+.pie{background:#1f2328;color:#c9ccd1;font-size:.875rem;line-height:1.5;padding:3.5rem 0 2rem;border-top:3px solid #1e3a5f}
 .pie a{color:#e6e7ea;text-decoration:none}.pie a:hover{color:#fff;text-decoration:underline}
 .pie-wrap>*+*{margin-top:2.25rem;padding-top:2.25rem;border-top:1px solid #353a42}
 .pie-cab{text-align:center;max-width:46rem;margin:0 auto}
@@ -142,10 +142,10 @@ em,i,cite,address,dfn,var{font-style:normal}
 
 /* «¿Cuándo usar la BAP?»: texto a la izquierda, hueco de foto a la derecha (pedido de Rosario) */
 .cuando-grid{isolation:isolate;display:grid;gap:2.5rem;grid-template-columns:1fr;align-items:center}
-.cuando-eti{margin:0 0 .5rem;font-size:.8125rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--acc,#c2603e)}
+.cuando-eti{margin:0 0 .5rem;font-size:.8125rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--acc,#1e3a5f)}
 .cuando-texto h2{margin-top:0}
 .cuando-marco{position:relative;margin:0;border:1px solid var(--rule);background:var(--card);padding:.75rem;box-shadow:var(--sombra)}
-.cuando-marco::before{content:"";position:absolute;inset:-8px 8px 8px -8px;border:1px solid var(--acc,#c2603e);z-index:-1;opacity:.55}
+.cuando-marco::before{content:"";position:absolute;inset:-8px 8px 8px -8px;border:1px solid var(--acc,#1e3a5f);z-index:-1;opacity:.55}
 .cuando-foto{aspect-ratio:4/3;width:100%;display:grid;place-items:center;background:var(--muted);border:1px dashed var(--rule);color:var(--mut);font-size:.875rem;letter-spacing:.08em;text-transform:uppercase}
 .cuando-marco>img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
 .cuando-imp{margin-top:3rem}
@@ -233,7 +233,7 @@ html.hmc-abierto{overflow:hidden}
 .trust-texto h2{margin:0 0 1.25rem}
 .trust-texto p{color:var(--mut);font-size:1rem;line-height:1.65;margin:0 0 2rem}
 .trust .trust-btn{width:fit-content;height:3rem;padding:0 1.5rem;border-radius:999px;font-size:1rem}
-.trust-visual{position:relative;display:flex;align-items:center;justify-content:center;padding:1.5rem;background:linear-gradient(135deg,rgba(32,41,60,.04),rgba(176,97,64,.05))}
+.trust-visual{position:relative;display:flex;align-items:center;justify-content:center;padding:1.5rem;background:linear-gradient(135deg,rgba(32,41,60,.04),rgba(30,58,95,.05))}
 .trust-marco{width:100%;max-width:22rem;aspect-ratio:4/3;border-radius:1rem;overflow:hidden;border:1px solid var(--borde);box-shadow:0 4px 24px rgba(32,41,60,.08)}
 .trust-marco img{display:block;width:100%;height:100%;object-fit:cover}
 @media (min-width:768px){.trust-texto{padding:3rem}.trust-texto p{font-size:1.125rem}.trust-visual{padding:2rem}.trust-marco{max-width:28rem}}
@@ -344,7 +344,7 @@ html.hmc-abierto{overflow:hidden}
 /* Etiquetas y textos a la izquierda */
 .eti{margin:0 0 .75rem;color:var(--mut);font-size:.75rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
 .eti-caja{display:inline-block;padding:.35rem .85rem;border:1px solid var(--borde);background:var(--card);color:var(--pri);letter-spacing:.08em}
-.resalte{position:relative;font-weight:700!important;background:linear-gradient(transparent 62%,rgba(176,97,64,.22) 62%)}
+.resalte{position:relative;font-weight:700!important;background:linear-gradient(transparent 62%,rgba(30,58,95,.22) 62%)}
 .lead-izq{color:var(--mut);font-size:1.0625rem;max-width:48rem;margin:0 0 2rem}
 .lead-izq strong{color:var(--fg)}
 /* Necesidad */
@@ -366,7 +366,7 @@ html.hmc-abierto{overflow:hidden}
 .ambitos li{padding:.4rem .9rem;border:1px solid var(--rule);background:var(--surf);font-weight:500;font-size:.9375rem}
 .tarjeta-opc{border-left:4px solid var(--acc)}
 @media (min-width:1024px){.quees-grid{grid-template-columns:1fr 1fr;gap:4rem;align-items:center}}
-/* Rejillas de tarjetas con filete terracota (como .benef de BAP) */
+/* Rejillas de tarjetas con filete marino (como .benef de BAP) */
 .rejilla{display:grid;gap:1.5rem;grid-template-columns:1fr}
 .tarjeta{background:var(--card);border:1px solid var(--borde);border-top:3px solid var(--acc);padding:1.75rem;box-shadow:var(--sombra)}
 .tarjeta h3{margin:0 0 .75rem}.tarjeta p{margin:0;color:var(--mut)}.tarjeta p strong{color:var(--fg)}
@@ -420,16 +420,16 @@ html.hmc-abierto{overflow:hidden}
 @media (min-width:640px){.hero-logo{width:min(100%,250px);margin-bottom:1.75rem}}
 @media (min-width:1024px){.hero-logo{margin-left:0;width:min(100%,280px)}}
 
-/* Iconos (Lucide, terracota BAP) y huecos de imagen pendiente, estilo home de socioemociograma (03/11/2026, Rosario vía DC) */
-.tarjeta-ico{display:inline-grid;place-items:center;width:3rem;height:3rem;margin:0 0 1rem;background:#f6ebe5;color:var(--acc);border:1px solid #ecd6ca}
+/* Iconos (Lucide, marino) y huecos de imagen pendiente, estilo home de socioemociograma (03/11/2026, Rosario vía DC) */
+.tarjeta-ico{display:inline-grid;place-items:center;width:3rem;height:3rem;margin:0 0 1rem;background:#e8eef5;color:var(--acc);border:1px solid #cdd8e6}
 .tarjeta-ico svg{width:1.5rem;height:1.5rem}
 .estilos>.tarjeta-ico{margin-bottom:.75rem}
-.spec-ico{display:inline-grid;place-items:center;vertical-align:-.45em;width:1.75rem;height:1.75rem;margin-right:.6rem;background:#f6ebe5;color:var(--acc)}
+.spec-ico{display:inline-grid;place-items:center;vertical-align:-.45em;width:1.75rem;height:1.75rem;margin-right:.6rem;background:#e8eef5;color:var(--acc)}
 .spec-ico svg{width:1rem;height:1rem}
 .lista-ico{list-style:none;padding:0;margin:0}
 .lista-ico li{display:flex;gap:.9rem;align-items:flex-start}
 .aporta.lista-ico li::before{content:none}
-.li-ico{flex:0 0 2rem;display:grid;place-items:center;width:2rem;height:2rem;background:#f6ebe5;color:var(--acc);margin-top:.05rem}
+.li-ico{flex:0 0 2rem;display:grid;place-items:center;width:2rem;height:2rem;background:#e8eef5;color:var(--acc);margin-top:.05rem}
 .li-ico svg{width:1.1rem;height:1.1rem}
 .img-pend{margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;width:100%;padding:1rem;text-align:center;background:repeating-linear-gradient(135deg,var(--surf),var(--surf) 12px,var(--muted) 12px,var(--muted) 24px);border:1px dashed var(--rule);color:var(--mut)}
 .img-4-3{aspect-ratio:4/3}.img-16-9{aspect-ratio:16/9}
