@@ -20,7 +20,7 @@
   <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
   <link rel="manifest" href="/site.webmanifest" />
-  <script>/* /que-es sin barra final -> /que-es/ (el staging sirve la home en rutas sin barra) */(function(){var r=["que-es", "aplicacion", "indicadores", "informes", "documentacion", "videos", "preguntas-frecuentes", "infografia", "tour-guiado"];var p=location.pathname.replace(/^\/|\/$/g,"");if(location.pathname.slice(-1)!=="/"&&r.indexOf(p)>-1)location.replace("/"+p+"/"+location.search+location.hash)})();</script>
+  <script>/* Staging (Caddy spa) sirve la home en /que-es y /que-es/: se pasa a /que-es/index.html (la subpágina limpia luego la URL) */(function(){var r=["que-es", "aplicacion", "indicadores", "informes", "documentacion", "videos", "preguntas-frecuentes", "infografia", "tour-guiado"];var p=location.pathname.replace(/^\/|\/$/g,"");if(r.indexOf(p)>-1)location.replace("/"+p+"/index.html"+location.search+location.hash)})();</script>
   <!-- CHAT DE OFELIA (obligatorio, no quitar): mismo snippet que socioemociograma y BAP, en el head -->
   <script src="https://go.habilmind.net/webchat/widget.js" async></script>
   <script type="module" src="/src/main.js"></script>
