@@ -349,8 +349,12 @@ html.hmc-abierto{overflow:hidden}
 .lead-izq strong{color:var(--fg)}
 /* Necesidad */
 .nec-grid{display:grid;gap:1.5rem}.nec-texto p{color:var(--mut);margin:0 0 1rem}.nec-texto strong{color:var(--fg)}
-.nec-imp{margin-top:1.5rem;border-left:4px solid var(--acc)}.nec-imp p{color:var(--fg);font-size:1.0625rem}
-@media (min-width:1024px){.nec-grid{grid-template-columns:.9fr 1.1fr;gap:4rem;align-items:start}.nec-grid h2{margin:0}}
+/* 03/11 · Rosario vía DC: #necesidad como socioemociograma (imagen 4:3 a la izquierda, h2 + texto + callout a la derecha, centrado vertical) */
+.nec-grid{display:grid;gap:1.25rem;max-width:72rem;margin:0 auto}
+.nec-texto{display:contents}.nec-texto h2{order:-2;margin:0}.nec-img{order:-1;width:100%;max-width:220px;margin:0 auto}
+.nec-texto p{margin:0}
+.nec-imp{margin-top:.25rem;padding:1rem 1.25rem;border:1px solid #cdd8e6;border-radius:.75rem;box-shadow:none}.nec-imp p{color:var(--fg);font-size:1.0625rem}
+@media (min-width:1024px){.nec-grid{grid-template-columns:5fr 7fr;gap:2.5rem;align-items:center}.nec-texto{display:block}.nec-img{max-width:none;margin:0}.nec-texto h2{margin:0 0 1.25rem}.nec-texto p+p{margin-top:.875rem}.nec-imp{margin-top:1.25rem}}
 /* Ficha técnica: rejilla de specs */
 .ficha{display:grid;gap:1px;margin:2rem 0 0;padding:0;background:var(--borde);border:1px solid var(--borde);grid-template-columns:1fr}
 .ficha .spec{display:block;background:var(--card);padding:1.5rem 1.5rem 1.6rem}
@@ -433,7 +437,6 @@ html.hmc-abierto{overflow:hidden}
 .img-pend-ico{color:var(--acc)}.img-pend-ico svg{width:2.25rem;height:2.25rem}
 .img-pend-eti{font-size:.8125rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--fg)}
 .img-pend-desc{font-size:.875rem}
-.nec-izq{display:grid;gap:1.5rem;align-content:start}
 .img-quees{margin-top:1.5rem}
 /* 03/11 · Rosario: filete superior del cierre en blanco y logo CAI del pie en blanco (como borrador-bap 2260442) */
 .cierre{border-top-color:#fff}
