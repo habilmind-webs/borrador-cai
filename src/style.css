@@ -517,3 +517,6 @@ html.hmc-abierto{overflow:hidden}
 /* Necesidad: foto real 4:3 (como la del hero) y, en escritorio, texto a la izquierda e imagen a la derecha */
 .img-nec{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
 @media (min-width:1024px){.nec-grid{grid-template-columns:7fr 5fr}.nec-img{order:2}}
+/* 03/11 · Rosario vía DC: foto de #necesidad con más radio y más ancha en escritorio (columnas 1fr/1fr) */
+.img-nec{border-radius:1.25rem}
+@media (min-width:1024px){.nec-grid{grid-template-columns:1fr 1fr;gap:3rem}}
