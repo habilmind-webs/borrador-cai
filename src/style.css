@@ -444,3 +444,7 @@ html.hmc-abierto{overflow:hidden}
 .cierre{border-top-color:#fff}
 .pie-placa{background:transparent;padding:0;border-radius:0}
 .pie-logo-cai{filter:brightness(0) invert(1)!important}
+
+/* Informes: como socioemociograma, imagen a la izquierda y tarjetas 2x2 a la derecha (03/11, Rosario vía DC) */
+.inf-grid{display:grid;gap:2rem;align-items:center;margin:0 0 2rem}.img-inf{box-shadow:var(--sombra)}
+@media (min-width:1024px){.inf-grid{grid-template-columns:1fr 1fr;gap:3rem}.inf-tarjetas{grid-template-columns:repeat(2,1fr)}}
