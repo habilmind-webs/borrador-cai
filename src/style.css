@@ -542,3 +542,5 @@ html.hmc-abierto{overflow:hidden}
 @media (min-width:768px){.cierre-tarjeta{padding:3rem}.cierre-eti{font-size:1rem}.cierre-ben{gap:1.5rem}.btn-cierre{height:3.5625rem;padding:0 3.5rem;font-size:1.125rem}}
 @media (min-width:1024px){.cierre-tarjeta{padding:4rem}.cierre .cierre-lead{font-size:1.125rem}.cierre-ben li{font-size:1rem}}
 @media (max-width:480px){.cierre-cta .btn-cierre{width:100%;padding:0 1.5rem}}
+/* Qué es: foto real (pedido de Rosario vía DC, 03/11/2026), mismo radio y 4:3 que #necesidad */
+.img-quees-foto{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:1.25rem}
