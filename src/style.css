@@ -416,9 +416,6 @@ html.hmc-abierto{overflow:hidden}
 @media (min-width:1024px){.hero-bap{display:block;text-align:right}}
 @media (max-width:860px){.marca-cai img{height:38px}}
 /* 03/11 · Logo CAI en el hero encima de los CTA (nueva petición de Rosario, sustituye la retirada de 8539b00) */
-.hero-logo{display:block;height:auto;width:min(80%,220px);margin:0 auto 1.5rem}
-@media (min-width:640px){.hero-logo{width:min(100%,250px);margin-bottom:1.75rem}}
-@media (min-width:1024px){.hero-logo{margin-left:0;width:min(100%,280px)}}
 
 /* Iconos (Lucide, marino) y huecos de imagen pendiente, estilo home de socioemociograma (03/11/2026, Rosario vía DC) */
 .tarjeta-ico{display:inline-grid;place-items:center;width:3rem;height:3rem;margin:0 0 1rem;background:#e8eef5;color:var(--acc);border:1px solid #cdd8e6}
@@ -446,3 +443,71 @@ html.hmc-abierto{overflow:hidden}
 /* Informes: como socioemociograma, imagen a la izquierda y tarjetas 2x2 a la derecha (03/11, Rosario vía DC) */
 .inf-grid{display:grid;gap:2rem;align-items:center;margin:0 0 2rem}.img-inf{box-shadow:var(--sombra)}
 @media (min-width:1024px){.inf-grid{grid-template-columns:1fr 1fr;gap:3rem}.inf-tarjetas{grid-template-columns:repeat(2,1fr)}}
+
+/* Secciones Colaboraciones, Expertos y Trust Center copiadas de borrador-bap (pedido de Rosario vía DC, 03/11/2026); acento CAI navy en vez de terracota. */
+/* Trust Center (pedido de Rosario): espejo de la sección de socioemociograma, tarjeta con texto izq. e imagen der. redondeada. */
+.trust-caja{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--borde);border-radius:1.5rem;box-shadow:0 4px 24px rgba(32,41,60,.06);overflow:hidden}
+.trust-texto{padding:2rem;display:flex;flex-direction:column;justify-content:center}
+.trust-etiq{display:inline-flex;align-items:center;gap:.5rem;width:fit-content;margin-bottom:1.25rem;padding:.35rem .85rem;border:1px solid var(--borde);border-radius:999px;background:var(--surf);color:var(--pri);font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.trust-texto h2{margin:0 0 1.25rem}
+.trust-texto p{color:var(--mut);font-size:1rem;line-height:1.65;margin:0 0 2rem}
+.trust .trust-btn{width:fit-content;height:3rem;padding:0 1.5rem;border-radius:999px;font-size:1rem}
+.trust-visual{position:relative;display:flex;align-items:center;justify-content:center;padding:1.5rem;background:linear-gradient(135deg,rgba(32,41,60,.04),rgba(30,58,95,.05))}
+.trust-marco{width:100%;max-width:22rem;aspect-ratio:4/3;border-radius:1rem;overflow:hidden;border:1px solid var(--borde);box-shadow:0 4px 24px rgba(32,41,60,.08)}
+.trust-marco img{display:block;width:100%;height:100%;object-fit:cover}
+@media (min-width:768px){.trust-texto{padding:3rem}.trust-texto p{font-size:1.125rem}.trust-visual{padding:2rem}.trust-marco{max-width:28rem}}
+@media (min-width:1024px){.trust{padding:6rem 0}.trust-caja{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}.trust-texto{padding:3.5rem}.trust-visual{padding:2.5rem;height:100%}.trust-marco{max-width:32rem}}
+@media (max-width:639px){.trust{padding:3rem 0}.trust-texto{padding:1.75rem 1.5rem}.trust .trust-btn{width:100%}}
+
+/* Carrusel de expertos (pedido de Rosario vía DC, hilo 994a21ea): espejo de la sección Expertos de socioemociograma
+   (badge recto con borde, título centrado con «Habilmind» en navy, subtítulo, tarjetas blancas 240px con borde, foto redonda, flechas cuadradas).
+   Autoplay 3 s en src/expertos.js; sin autoplay con prefers-reduced-motion. */
+.expertos{border-top:1px solid var(--borde)}
+.exp-cab{text-align:center;margin-bottom:2.5rem}
+.exp-etiq{display:inline-flex;align-items:center;gap:.75rem;width:fit-content;max-width:100%;margin:0 auto 1.25rem;padding:.75rem 1rem;border:1px solid var(--rule);border-radius:0;color:var(--fg);font-size:clamp(.875rem,1vw,1rem);font-weight:500}
+.exp-etiq svg{flex:0 0 auto}
+.exp-cab h2{max-width:48rem;margin:0 auto}
+.exp-hl{color:var(--pri)}
+.exp-sub{margin:.75rem auto 0;max-width:42rem;color:var(--mut);font-size:1rem}
+.exp-marco{position:relative;margin:0 -1rem}
+.exp-pista{list-style:none;margin:0;padding:1rem 11vw;display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:11vw;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;overscroll-behavior-x:contain;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 8%,#000 92%,transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 8%,#000 92%,transparent 100%)}
+.exp-pista::-webkit-scrollbar{display:none}
+.exp-pista:focus{outline:none}
+.exp-pista.arrastrando{scroll-snap-type:none;scroll-behavior:auto;cursor:grabbing}
+.exp-slide{flex:0 0 78vw;max-width:20rem;display:flex;scroll-snap-align:start}
+.exp-card{width:100%;display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.5rem 1.25rem;background:var(--card);border:1px solid var(--rule);transition:border-color .2s,box-shadow .2s;user-select:none}
+.exp-card:hover,.exp-card:focus-within{border-color:var(--pri);box-shadow:0 6px 20px rgba(32,41,60,.08)}
+.exp-foto{display:block;width:80px;height:80px;border-radius:9999px;object-fit:cover;border:1px solid var(--rule);margin-bottom:.9rem;background:var(--muted);-webkit-user-drag:none}
+.exp-card h3{margin:0 0 .5rem;font-size:clamp(1.05rem,1.4vw,1.25rem)}
+.exp-card p{margin:0;color:var(--mut);font-size:.9375rem;line-height:1.6;flex:1}
+.exp-mas{margin-top:1rem;display:inline-flex;align-items:center;gap:.375rem;font-size:.875rem;font-weight:600;color:var(--pri);text-decoration:none;transition:color .2s,gap .2s}
+.exp-mas:hover{color:var(--fg);gap:.6rem}
+.exp-mas:focus-visible{outline:2px solid var(--pri);outline-offset:3px}
+.exp-flecha{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:2.75rem;height:2.75rem;display:flex;align-items:center;justify-content:center;padding:0;background:var(--card);color:var(--pri);border:1px solid var(--rule);border-radius:0;cursor:pointer;box-shadow:0 4px 14px rgba(32,41,60,.12);transition:background-color .2s,color .2s,box-shadow .2s,transform .2s}
+.exp-flecha:hover{background:var(--pri);color:#fff;box-shadow:0 6px 18px rgba(32,41,60,.22)}
+.exp-flecha:active{transform:translateY(-50%) scale(.95)}
+.exp-flecha:focus-visible,.exp-dot:focus-visible{outline:2px solid var(--pri);outline-offset:3px}
+.exp-prev{left:.75rem}.exp-next{right:.75rem}
+.exp-ctrl{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:1.25rem;flex-wrap:wrap}
+.exp-dots{display:flex;flex-wrap:wrap;justify-content:center;gap:.125rem;max-width:34rem}
+.exp-dot{position:relative;width:1.5rem;height:1.5rem;padding:0;background:transparent;border:0;cursor:pointer}
+.exp-dot::before{content:"";position:absolute;top:50%;left:50%;width:.5rem;height:.5rem;border-radius:9999px;background:var(--rule);transform:translate(-50%,-50%);transition:width .2s,background-color .2s}
+.exp-dot:hover::before{background:var(--mut)}
+.exp-dot[aria-current="true"]::before{width:1.25rem;background:var(--pri)}
+@media (min-width:768px){.exp-marco{margin:0}.exp-pista{padding:1rem 3.75rem;scroll-padding-inline:3.75rem}.exp-slide{flex-basis:240px}.exp-prev{left:.25rem}.exp-next{right:.25rem}.exp-flecha{width:3rem;height:3rem}}
+@media (max-width:639px){.exp-cab{margin-bottom:1.75rem}.exp-flecha{width:2.5rem;height:2.5rem}.exp-prev{left:.5rem}.exp-next{right:.5rem}}
+@media (prefers-reduced-motion:reduce){.exp-pista{scroll-behavior:auto}.exp-card,.exp-flecha,.exp-dot::before,.exp-mas{transition:none}}
+
+/* Colaboraciones (universidades): marquee infinito y continuo de 2 filas en sentidos opuestos (nunca se pausa); logos sin tarjeta, con fondo transparente; estático con prefers-reduced-motion. */
+.uni{border-top:1px solid var(--borde)}
+.uni-marquee{display:grid;gap:.5rem}
+.uni-fila{overflow:hidden;padding:.75rem 0;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 10%,#000 90%,transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 10%,#000 90%,transparent 100%)}
+.uni-pista{display:flex;align-items:center;gap:1.25rem;width:max-content;margin:0;padding:0;list-style:none;animation:uniIzq 50s linear infinite}
+.uni-der .uni-pista{animation-name:uniDer;animation-duration:45s}
+.uni-logo{flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:180px;height:88px;padding:.75rem 1rem;background:transparent;border:0;box-shadow:none}
+.uni-logo img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+@keyframes uniIzq{from{transform:translateX(0)}to{transform:translateX(calc(-50% - .625rem))}}
+@keyframes uniDer{from{transform:translateX(calc(-50% - .625rem))}to{transform:translateX(0)}}
+@media (max-width:639px){.uni-logo{width:140px;height:70px;padding:.5rem .75rem}.uni-pista{gap:.75rem}@keyframes uniIzq{from{transform:translateX(0)}to{transform:translateX(calc(-50% - .375rem))}}@keyframes uniDer{from{transform:translateX(calc(-50% - .375rem))}to{transform:translateX(0)}}}
+@media (prefers-reduced-motion:reduce){.uni-fila{-webkit-mask-image:none;mask-image:none}.uni-pista{animation:none;width:auto;flex-wrap:wrap;justify-content:center}.uni-logo[aria-hidden="true"]{display:none}}

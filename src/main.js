@@ -69,3 +69,4 @@ initConsentScripts();
   document.addEventListener('click', (e) => { if (!caja.contains(e.target)) set(false); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && caja.classList.contains('abierto')) { set(false); btn.focus(); } });
 })();
+import './expertos.js';
