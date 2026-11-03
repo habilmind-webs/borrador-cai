@@ -335,7 +335,8 @@ html.hmc-abierto{overflow:hidden}
 .hero-dev{flex-wrap:wrap;gap:.5rem}
 .insignia-icce{flex-wrap:wrap;justify-content:center}.insignia-icce:hover{background:transparent}
 .insignia-nom{font-size:.875rem;color:var(--mut);font-weight:500;line-height:1.35}
-.logo-pend{display:inline-flex;align-items:center;justify-content:center;height:2.25rem;padding:0 .75rem;border:1px dashed var(--rule);background:var(--surf);color:var(--mut);font-size:.75rem;font-weight:500;white-space:nowrap}
+.insignia-icce img.logo-icce{height:3.5rem;width:3.5rem;flex:none}
+@media (max-width:639px){.insignia-icce img.logo-icce{height:3rem;width:3rem}}
 .insignia-bap>span:first-child{max-width:19rem;text-align:left;line-height:1.35;font-size:.875rem}
 .insignia-bap img{height:1.75rem}
 .foto-pend{display:grid;place-items:center;width:100%;aspect-ratio:4/3;background:repeating-linear-gradient(135deg,var(--surf),var(--surf) 12px,var(--muted) 12px,var(--muted) 24px);border:1px dashed var(--rule);color:var(--mut);font-size:.9375rem;font-weight:500}
@@ -407,12 +408,10 @@ html.hmc-abierto{overflow:hidden}
 @media (max-width:767px){.insignia-bap{flex-wrap:wrap;justify-content:center;text-align:center}.insignia-bap>span:first-child{text-align:center;flex-shrink:1}}
 /* 03/11 · Logo oficial CAI (PNG transparente, letras oscuras) y badge «Incluido en tu suscripción» como socioemociograma */
 .marca-cai img{height:44px;width:auto;max-width:min(52vw,200px);object-fit:contain}
-.hero-logo{display:block;height:auto;width:min(100%,250px);margin:0 auto 1.75rem}
 .insignia-inc>span:first-child{white-space:nowrap}
 .insignia-movil.insignia-inc{margin-top:1.25rem}
 .hero-bap{display:inline-block;margin-top:.875rem;font-size:.8125rem;color:var(--mut);text-decoration:none;line-height:1.4}.hero-bap:hover{color:var(--fg);text-decoration:underline}
 .pie-placa{display:inline-flex;align-items:center;background:#fff;border-radius:12px;padding:.6rem .9rem}
 .pie-logo-cai{height:40px!important;max-width:100%}
-@media (min-width:1024px){.hero-logo{margin-left:0;width:min(100%,280px)}.hero-bap{display:block;text-align:right}}
+@media (min-width:1024px){.hero-bap{display:block;text-align:right}}
 @media (max-width:860px){.marca-cai img{height:38px}}
-@media (max-width:639px){.hero-logo{width:min(80%,220px);margin-bottom:1.5rem}}
