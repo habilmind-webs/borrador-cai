@@ -514,3 +514,6 @@ html.hmc-abierto{overflow:hidden}
 @keyframes uniDer{from{transform:translateX(calc(-50% - .625rem))}to{transform:translateX(0)}}
 @media (max-width:639px){.uni-logo{width:140px;height:70px;padding:.5rem .75rem}.uni-pista{gap:.75rem}@keyframes uniIzq{from{transform:translateX(0)}to{transform:translateX(calc(-50% - .375rem))}}@keyframes uniDer{from{transform:translateX(calc(-50% - .375rem))}to{transform:translateX(0)}}}
 @media (prefers-reduced-motion:reduce){.uni-fila{-webkit-mask-image:none;mask-image:none}.uni-pista{animation:none;width:auto;flex-wrap:wrap;justify-content:center}.uni-logo[aria-hidden="true"]{display:none}}
+/* Necesidad: foto real 4:3 (como la del hero) y, en escritorio, texto a la izquierda e imagen a la derecha */
+.img-nec{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+@media (min-width:1024px){.nec-grid{grid-template-columns:7fr 5fr}.nec-img{order:2}}
