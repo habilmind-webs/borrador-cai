@@ -419,3 +419,24 @@ html.hmc-abierto{overflow:hidden}
 .hero-logo{display:block;height:auto;width:min(80%,220px);margin:0 auto 1.5rem}
 @media (min-width:640px){.hero-logo{width:min(100%,250px);margin-bottom:1.75rem}}
 @media (min-width:1024px){.hero-logo{margin-left:0;width:min(100%,280px)}}
+
+/* Iconos (Lucide, terracota BAP) y huecos de imagen pendiente, estilo home de socioemociograma (03/11/2026, Rosario vía DC) */
+.tarjeta-ico{display:inline-grid;place-items:center;width:3rem;height:3rem;margin:0 0 1rem;background:#f6ebe5;color:var(--acc);border:1px solid #ecd6ca}
+.tarjeta-ico svg{width:1.5rem;height:1.5rem}
+.estilos>.tarjeta-ico{margin-bottom:.75rem}
+.spec-ico{display:inline-grid;place-items:center;vertical-align:-.45em;width:1.75rem;height:1.75rem;margin-right:.6rem;background:#f6ebe5;color:var(--acc)}
+.spec-ico svg{width:1rem;height:1rem}
+.lista-ico{list-style:none;padding:0;margin:0}
+.lista-ico li{display:flex;gap:.9rem;align-items:flex-start}
+.aporta.lista-ico li::before{content:none}
+.li-ico{flex:0 0 2rem;display:grid;place-items:center;width:2rem;height:2rem;background:#f6ebe5;color:var(--acc);margin-top:.05rem}
+.li-ico svg{width:1.1rem;height:1.1rem}
+.img-pend{margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;width:100%;padding:1rem;text-align:center;background:repeating-linear-gradient(135deg,var(--surf),var(--surf) 12px,var(--muted) 12px,var(--muted) 24px);border:1px dashed var(--rule);color:var(--mut)}
+.img-4-3{aspect-ratio:4/3}.img-16-9{aspect-ratio:16/9}
+.img-pend-ico{color:var(--acc)}.img-pend-ico svg{width:2.25rem;height:2.25rem}
+.img-pend-eti{font-size:.8125rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--fg)}
+.img-pend-desc{font-size:.875rem}
+.nec-izq{display:grid;gap:1.5rem;align-content:start}
+.img-quees{margin-top:1.5rem}
+.img-ancha{margin:0 0 2rem;box-shadow:var(--sombra)}
+@media (min-width:1024px){.img-ancha{max-width:840px;margin-left:auto;margin-right:auto}}
