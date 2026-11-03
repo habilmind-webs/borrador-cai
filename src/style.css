@@ -415,3 +415,7 @@ html.hmc-abierto{overflow:hidden}
 .pie-logo-cai{height:40px!important;max-width:100%}
 @media (min-width:1024px){.hero-bap{display:block;text-align:right}}
 @media (max-width:860px){.marca-cai img{height:38px}}
+/* 03/11 · Logo CAI en el hero encima de los CTA (nueva petición de Rosario, sustituye la retirada de 8539b00) */
+.hero-logo{display:block;height:auto;width:min(80%,220px);margin:0 auto 1.5rem}
+@media (min-width:640px){.hero-logo{width:min(100%,250px);margin-bottom:1.75rem}}
+@media (min-width:1024px){.hero-logo{margin-left:0;width:min(100%,280px)}}
