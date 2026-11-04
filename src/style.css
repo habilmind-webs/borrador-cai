@@ -608,3 +608,16 @@ html.hmc-abierto{overflow:hidden}
   .ft-specs .ft-spec{padding:1.25rem}
 }
 }
+/* #informes: carrusel con los 3 ejemplos de informe del CAI (04/11/2026, Rosario vía DC): marco 16:9, imagen entera sobre blanco, desliza con scroll-snap, flechas y puntos */
+.inf-carrusel{min-width:0}
+.inf-pista{list-style:none;margin:0;padding:0;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;background:#fff;border:1px solid var(--borde);box-shadow:var(--sombra)}
+.inf-pista::-webkit-scrollbar{display:none}.inf-pista:focus-visible{outline:2px solid var(--pri);outline-offset:2px}
+.inf-slide{flex:0 0 100%;scroll-snap-align:start;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;padding:.5rem}
+.inf-slide-a{display:block;width:100%;height:100%}
+.inf-slide img{display:block;width:100%;height:100%;object-fit:contain}
+.inf-ctrl{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:.875rem}
+.inf-btn{display:inline-grid;place-items:center;width:2.5rem;height:2.5rem;border:1px solid var(--borde);background:#fff;color:var(--fg);cursor:pointer;transition:background-color .2s}.inf-btn:hover{background:var(--muted)}
+.inf-dots{display:flex;gap:.25rem}
+.inf-dot{width:1.5rem;height:1.5rem;padding:0;border:0;background:none;cursor:pointer;display:grid;place-items:center}
+.inf-dot::before{content:"";width:.625rem;height:.625rem;border-radius:50%;background:var(--rule)}
+.inf-dot[aria-current="true"]::before{background:var(--pri)}
