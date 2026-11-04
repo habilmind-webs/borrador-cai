@@ -16,7 +16,8 @@
   <meta property="og:url" content="https://borrador-cai.2-31-95-201.sslip.io/" />
   <meta name="twitter:card" content="summary" />
   <meta name="theme-color" content="#fafaf5" />
-  <!-- Favicon: /favicon.ico idéntico al de socioemociograma.com, sin <link rel=icon> (como socio) -->
+  <!-- Favicon: /favicon.ico idéntico al de socioemociograma.com; ?v= solo para saltarse la caché del favicon anterior -->
+  <link rel="icon" href="/favicon.ico?v=20261104" sizes="any" />
   <script>/* Staging (Caddy spa) sirve la home en /que-es y /que-es/: se pasa a /que-es/index.html (la subpágina limpia luego la URL) */(function(){var r=["que-es", "aplicacion", "indicadores", "informes", "documentacion", "videos", "preguntas-frecuentes", "infografia", "tour-guiado"];var p=location.pathname.replace(/^\/|\/$/g,"");if(r.indexOf(p)>-1)location.replace("/"+p+"/index.html"+location.search+location.hash)})();</script>
   <!-- CHAT DE OFELIA (obligatorio, no quitar): mismo snippet que socioemociograma y BAP, en el head -->
   <script src="https://go.habilmind.net/webchat/widget.js" async></script>
@@ -172,18 +173,22 @@
       </div>
     </section>
 
-    <section class="sec" id="ficha-tecnica">
-      <div class="wrap">
-        <p class="eti">Ficha técnica</p>
-        <h2>Ficha técnica del CAI</h2>
-        <dl class="ficha">
-          <div class="spec"><dt><span class="spec-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg></span>Autores</dt><dd>Manuel Delgado Montoto y Blanca Mejías García. Autores del instrumento original del ICCE.</dd></div>
-          <div class="spec"><dt><span class="spec-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></span>Aplicación</dt><dd>Individual y colectiva.</dd></div>
-          <div class="spec"><dt><span class="spec-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>Duración</dt><dd><strong>30 minutos aproximadamente.</strong> Sin tiempo limitado de respuesta.</dd></div>
-          <div class="spec spec-ancha"><dt><span class="spec-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg></span>Edad de aplicación</dt><dd><strong>Desde 4.º de Primaria, aproximadamente 9 años.</strong> El cuestionario tiene dos niveles que permite adaptar las preguntas a las distintas etapas evolutivas:<ul class="niveles"><li><strong>Nivel 1:</strong> 4.º a 6.º de Primaria.</li><li><strong>Nivel 2:</strong> Secundaria y Bachillerato.</li></ul></dd></div>
-          <div class="spec spec-ancha"><dt><span class="spec-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>Administración e interpretación</dt><dd>Cualificación de <strong>nivel B</strong> para la administración. El profesorado puede colaborar en la supervisión de la aplicación digital. La interpretación psicopedagógica y las decisiones educativas derivadas corresponden al <strong>equipo de orientación</strong>.</dd></div>
-          <div class="spec spec-idiomas"><dt class="sr-only">Idiomas</dt><dd class="idiomas-dd"><div class="idiomas-card"><span class="idiomas-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span><div class="idiomas-txt"><p class="idiomas-label" aria-hidden="true">Idiomas</p><div class="idiomas-chips"><span class="idioma-chip"><img src="/img/flags/es.webp" alt="Bandera de España" width="16" height="16" loading="lazy" />Español</span></div></div></div></dd></div>
-        </dl>
+    <section class="sec ft-sec" id="ficha-tecnica">
+      <div class="wrap ft-wrap">
+        <div class="ft-caja">
+          <h2 class="ft-h2">Ficha técnica del CAI</h2>
+          <p class="ft-mini">Autores</p>
+          <div class="ft-autores">
+            <div class="ft-autor"><span class="ft-avatar"><img src="/img/logo-icce.svg" alt="ICCE" width="48" height="48" loading="lazy" /></span><div><p class="ft-nombre">Manuel Delgado Montoto y Blanca Mejías García</p><p class="ft-desc">Autores del instrumento original del ICCE.</p></div></div>
+          </div>
+          <dl class="ft-specs">
+            <div class="ft-spec"><dt><span class="ft-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></span><span class="ft-label">Aplicación</span></dt><dd>Individual y colectiva.</dd></div>
+            <div class="ft-spec"><dt><span class="ft-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><span class="ft-label">Duración</span></dt><dd><strong>30 minutos aproximadamente.</strong> Sin tiempo limitado de respuesta.</dd></div>
+            <div class="ft-spec ft-edad"><dt><span class="ft-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg></span><span class="ft-label">Edad de aplicación</span></dt><dd><strong>Desde 4.º de Primaria, aproximadamente 9 años.</strong> El cuestionario tiene dos niveles que permite adaptar las preguntas a las distintas etapas evolutivas:<ul class="niveles"><li><strong>Nivel 1:</strong> 4.º a 6.º de Primaria.</li><li><strong>Nivel 2:</strong> Secundaria y Bachillerato.</li></ul></dd></div>
+            <div class="ft-spec ft-admin"><dt><span class="ft-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="ft-label">Administración e interpretación</span></dt><dd>Cualificación de <strong>nivel B</strong> para la administración. El profesorado puede colaborar en la supervisión de la aplicación digital. La interpretación psicopedagógica y las decisiones educativas derivadas corresponden al <strong>equipo de orientación</strong>.</dd></div>
+            <div class="ft-spec ft-idiomas"><dt><span class="ft-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span><span class="ft-label">Idiomas</span></dt><dd><div class="idiomas-chips"><span class="idioma-chip"><img src="/img/flags/es.webp" alt="Bandera de España" width="16" height="16" loading="lazy" />Español</span></div></dd></div>
+          </dl>
+        </div>
       </div>
     </section>
 
