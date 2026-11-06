@@ -343,7 +343,7 @@ html.hmc-abierto{overflow:hidden}
 @media (min-width:1024px){.insignia-icce{justify-content:flex-start}}
 /* Etiquetas y textos a la izquierda */
 .eti{margin:0 0 .75rem;color:var(--mut);font-size:.75rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
-.eti-caja{display:inline-block;padding:.35rem .85rem;border:1px solid var(--borde);background:var(--card);color:var(--pri);letter-spacing:.08em}
+.eti-caja{display:inline-block;width:fit-content;max-width:100%;padding:.35rem .85rem;border:1px solid var(--borde);background:var(--card);color:var(--pri);letter-spacing:.08em}
 .resalte{position:relative;font-weight:700!important}
 .lead-izq{color:var(--mut);font-size:1.0625rem;max-width:48rem;margin:0 0 2rem}
 .lead-izq strong{color:var(--fg)}
@@ -367,7 +367,7 @@ html.hmc-abierto{overflow:hidden}
 /* Qué es: solo lead + foto (pedido Rosario vía DC, 06/11/2026); sin bloques derechos */
 .quees-grid{display:grid;gap:2rem;align-items:start}
 .quees-texto .lead-izq{font-size:1.125rem;line-height:1.7;margin-bottom:0;max-width:36rem}
-@media (min-width:1024px){.quees-grid{grid-template-columns:1fr 1fr;gap:4rem;align-items:center}.quees-texto{display:flex;flex-direction:column;justify-content:center}.img-quees{margin-top:0}}
+@media (min-width:1024px){.quees-grid{grid-template-columns:1fr 1fr;gap:4rem;align-items:center}.quees-texto{display:flex;flex-direction:column;justify-content:center;align-items:flex-start}.img-quees{margin-top:0}}
 /* Rejillas de tarjetas con filete marino (como .benef de BAP) */
 .rejilla{display:grid;gap:1.5rem;grid-template-columns:1fr}
 .tarjeta{background:var(--card);border:1px solid var(--borde);border-top:3px solid var(--acc);padding:1.75rem;box-shadow:var(--sombra)}
