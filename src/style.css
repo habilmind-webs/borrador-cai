@@ -656,3 +656,9 @@ html.hmc-abierto{overflow:hidden}
 .inf-lb .inf-lb-punto:hover{background:rgba(255,255,255,.6)}.inf-lb .inf-lb-punto[aria-current="true"]{width:1.5rem;background:#fff}
 @media (min-width:768px){.inf-lb-escena{flex:1}.inf-lb-nav{display:inline-grid!important}.inf-lb-movil{display:none}.inf-lb-puntos{display:flex}.inf-lb-escena{padding:0 5rem}}
 @media (prefers-reduced-motion:reduce){.inf-lb,.inf-lb-img{transition:none!important}}
+
+/* Pantallas grandes (>1440 px CSS, también zoom del navegador 80–90 %): la etiqueta de Colaboraciones y Expertos se queda como a 1440 px (clamp(.875rem,1vw,1rem) = 14,4 px = .9rem); a 1440 px o menos no cambia nada */
+@media (min-width:1441px){.exp-etiq{font-size:.9rem}}
+
+/* Franja «Desarrollado por ICCE · Y la tecnología de Habilmind» con ventana de 932–1023 px CSS (p. ej. pantalla grande a media pantalla o con escalado 150–200 %): misma disposición y ancho que a 1440 px (3 filas, 497 px), centrada; a 1024 px o más y por debajo de 768 px no cambia nada */
+@media (min-width:768px) and (max-width:1023px){.hero-dev{max-width:31.05rem;margin-left:auto;margin-right:auto;justify-content:flex-start}.hero-dev .insignia-icce{justify-content:flex-start}}
